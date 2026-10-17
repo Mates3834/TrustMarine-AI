@@ -1,0 +1,103 @@
+[
+  {
+    "ground_truth": "normal",
+    "decision": {
+      "suspected_fault": "normal",
+      "anomalous": false,
+      "confidence_level": "baseline-consistent",
+      "evidence": [
+        "No anomaly detected by the fitted baseline model"
+      ],
+      "recommended_action": "Continue routine monitoring; no automated safety decision.",
+      "requires_human_review": false,
+      "tools_used": [
+        "inspect_sensors",
+        "detect_anomaly",
+        "rule_based_diagnosis",
+        "human_review_gate"
+      ],
+      "limitations": "Synthetic training data; heuristic diagnosis; anomaly score is not a calibrated probability. Not for operational use."
+    }
+  },
+  {
+    "ground_truth": "cooling_degradation",
+    "decision": {
+      "suspected_fault": "cooling_degradation",
+      "anomalous": true,
+      "confidence_level": "moderate",
+      "evidence": [
+        "coolant_temp_c=92.69 (baseline z=+5.8)",
+        "bus_frequency_hz=50.20 (baseline z=+3.2)"
+      ],
+      "recommended_action": "Request engineer inspection and confirm with independent measurements; do not automate maintenance actions.",
+      "requires_human_review": true,
+      "tools_used": [
+        "inspect_sensors",
+        "detect_anomaly",
+        "rule_based_diagnosis",
+        "human_review_gate"
+      ],
+      "limitations": "Synthetic training data; heuristic diagnosis; anomaly score is not a calibrated probability. Not for operational use."
+    }
+  },
+  {
+    "ground_truth": "bearing_wear",
+    "decision": {
+      "suspected_fault": "bearing_wear",
+      "anomalous": true,
+      "confidence_level": "moderate",
+      "evidence": [
+        "bearing_vibration_mm_s=6.35 (baseline z=+18.3)"
+      ],
+      "recommended_action": "Request engineer inspection and confirm with independent measurements; do not automate maintenance actions.",
+      "requires_human_review": true,
+      "tools_used": [
+        "inspect_sensors",
+        "detect_anomaly",
+        "rule_based_diagnosis",
+        "human_review_gate"
+      ],
+      "limitations": "Synthetic training data; heuristic diagnosis; anomaly score is not a calibrated probability. Not for operational use."
+    }
+  },
+  {
+    "ground_truth": "lubrication_loss",
+    "decision": {
+      "suspected_fault": "lubrication_loss",
+      "anomalous": true,
+      "confidence_level": "moderate",
+      "evidence": [
+        "oil_pressure_bar=2.33 (baseline z=-13.5)"
+      ],
+      "recommended_action": "Request engineer inspection and confirm with independent measurements; do not automate maintenance actions.",
+      "requires_human_review": true,
+      "tools_used": [
+        "inspect_sensors",
+        "detect_anomaly",
+        "rule_based_diagnosis",
+        "human_review_gate"
+      ],
+      "limitations": "Synthetic training data; heuristic diagnosis; anomaly score is not a calibrated probability. Not for operational use."
+    }
+  },
+  {
+    "ground_truth": "load_instability",
+    "decision": {
+      "suspected_fault": "normal",
+      "anomalous": false,
+      "confidence_level": "baseline-consistent",
+      "evidence": [
+        "No anomaly detected by the fitted baseline model"
+      ],
+      "recommended_action": "Continue routine monitoring; no automated safety decision.",
+      "requires_human_review": false,
+      "tools_used": [
+        "inspect_sensors",
+        "detect_anomaly",
+        "rule_based_diagnosis",
+        "human_review_gate"
+      ],
+      "limitations": "Synthetic training data; heuristic diagnosis; anomaly score is not a calibrated probability. Not for operational use."
+    }
+  }
+]
